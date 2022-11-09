@@ -1,0 +1,18 @@
+# Ejercicio 6: Tabla de multiplicar
+# Hacer un programa que pida un número hasta el 10, por ejemplo:
+# Si digita el 5 en la lista tendrá: 5,10,15,20,25,30,35,40,45,50
+
+
+
+numero = int(input('Ingrese un número para saber su tabla: '))
+lista = []
+
+for i in range (1,11):
+    lista.append(i*numero)
+
+print(f'\nTabla de multiplicar del {numero}: \n {lista}')
+
+
+for indice, i in enumerate(lista):
+    print(f'{numero} x {i} = {lista[indice]} \n') # Este ciclo es para ver el formato de una tabla de multiplicar
+    
