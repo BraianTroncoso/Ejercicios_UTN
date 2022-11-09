@@ -89,8 +89,8 @@ nombre2 = ['Cristian','Pedro','Carlos']
 desplegarNombres(nombre2)
 desplegarNombres('Carla')
 # desplegarNombres(10,11) # No es un objeto iterable
-desplegarNombres((10, 11)) # La convertimos a una tupla, en un solo elemento no olvidar la coma
-desplegarNombres([22, 55]) # La converitmos en una lista
+desplegarNombres((10,11)) # Lo convertimos a una tupla, en un solo elemento no olvidar la coma
+desplegarNombres([22,55]) # Lo convertimos en una lista
 # Funciones Recursivas
 
 def factorial(numero):
