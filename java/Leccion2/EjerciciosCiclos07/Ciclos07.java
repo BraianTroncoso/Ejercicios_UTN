@@ -26,7 +26,26 @@ public class Ciclos07 {
             System.out.println("\nEl promedio es: "+ promedio);
         }
     }
+/*
+// Mi solucion con JOptionPane
+ int num, conteo = 0, suma = 0;
+        float promedio = 0;
 
+        num = Integer.parseInt(JOptionPane.showInputDialog("Digite un número: "));
+
+        while ( num >= 0){
+            suma += num;
+            conteo ++;
+            num = Integer.parseInt(JOptionPane.showInputDialog("Digite otro número: "));
+        }
+        if (conteo == 0){
+            JOptionPane.showMessageDialog(null, "No se puede dividir por 0");
+        }
+        else{
+            promedio = suma / conteo;
+        }
+        JOptionPane.showMessageDialog(null, "El promedio del valor es: "+ promedio);
+ */
 }
 
 
