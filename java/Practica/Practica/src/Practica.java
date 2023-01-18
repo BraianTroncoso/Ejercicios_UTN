@@ -7,32 +7,10 @@ public class Practica {
     Hacerlo con la clase Scanner y JOptionPane
      */
     public static void main(String[] args) {
-
-     // Mi solucion con Scanner
-        Scanner entrada = new Scanner(System.in);
-        int suma = 0;
-        int contador = 0;
-        System.out.println("Ingrese un valor: ");
-        int numero = entrada.nextInt();
-
-        while (contador <= 9){
-            suma += numero;
-            contador++;
-            numero = entrada.nextInt();
+        long producto = 1;
+        for(int i = 1; i<=20; i+=2){
+            producto*= i;
         }
-        System.out.println("La suma total de los 10 valores es: " +suma);
-
-        // Mi solucion con JOptionPane
-        /*
-
-        int contador = 0;
-        int suma = 0;
-        int numero = Integer.parseInt(JOptionPane.showInputDialog("Digite un numero "));
-        while (contador <= 9){
-            suma += numero;
-            contador++;
-            numero = Integer.parseInt(JOptionPane.showInputDialog("Digite otro numero "));
-        }
-        JOptionPane.showMessageDialog(null,"La suma del total es: " + suma);*/
+        JOptionPane.showMessageDialog(null, "El promedio del valor es: "+producto);
     }
 }
