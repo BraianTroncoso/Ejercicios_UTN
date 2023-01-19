@@ -5,15 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9a36567a-5147-44b6-98fe-2026c18f2743" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/EjercicioCiclos11.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/EjercicioCiclos11/ciclos11/Ciclos11.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ciclos11/Ciclos11.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Practica/Practica/src/Practica.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../Practica/Practica/src/Practica.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Practica/out/production/Practica/Practica.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../Practica/out/production/Practica/Practica.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../EjercicioCiclos12/src/ciclos12/Ciclos12.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/EjercicioCiclos11/ciclos11/Ciclos11.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/EjercicioCiclos11/ciclos11/Ciclos11.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -46,7 +40,8 @@
     "ASKED_ADD_EXTERNAL_FILES": "true",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true"
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "last_opened_file_path": "/home/braianaxeltroncoso/Escritorio/todoEscritorio/tecnicaturaGit/Ejercicios_UTN/java/Leccion2/EjercicioCiclos12"
   }
 }]]></component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -62,5 +57,16 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/ciclos11/Ciclos11.java</url>
+          <line>12</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
