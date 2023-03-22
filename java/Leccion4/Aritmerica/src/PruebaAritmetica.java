@@ -1,3 +1,4 @@
+/*
 import Operaciones.Aritmetica;
 
 public class PruebaAritmetica { // Una sola clase se puede hacer de tipo publica
@@ -30,10 +31,12 @@ public class PruebaAritmetica { // Una sola clase se puede hacer de tipo publica
     }
 
 
+*/
 /*        Persona persona = new Persona("Ariel","Bentacud");
         System.out.println("persona = " + persona);
         System.out.println("persona nombre = " + persona.nombre);
-        System.out.println("persona apellido = " + persona.apellido);*/
+        System.out.println("persona apellido = " + persona.apellido);*//*
+
 // Modularidad creamos un nuevo método
     public static void miMetodo(){
         // int a = 10; // Esta variable esta limitada
@@ -50,3 +53,4 @@ class Persona{ // Se le asigna a la clase un tipo default o package a la clase (
     }
 }
 }
+*/
