@@ -22,6 +22,19 @@ public class PruebaCaja {
         //Llamamos con el nuevo objeto al método para un nuevo calculo
         System.out.println("Resultado volumen de caja 2: " + caja2.calcularVolumen());
 
+        // Otra solucion sin paradigma a o objectos
+        Scanner entrada = new Scanner(System.in);
+        int ancho,alto,profundidad,volumen;
+        System.out.println("Digite un valor númerico para el ancho: ");
+        ancho = entrada.nextInt();
+        System.out.println("Digite un valor númerico para el alto: ");
+        alto = entrada.nextInt();
+        System.out.println("Digite un valor númerico para el profundidad: ");
+        profundidad = entrada.nextInt();
+
+        volumen = ancho * alto * profundidad;
+        System.out.println("El volumen total de los valores es: " + volumen);
+
 
     }
 }
