@@ -19,6 +19,8 @@ public class Ciclos12 {
 //        System.out.println("Factorial = " + factorial);
 //
 //
+
+
         // Mi Solucion con JOptionPane
 /*        long factorial = 1;
         int num = Integer.parseInt(JOptionPane.showInputDialog("Digite un número: "));

@@ -57,7 +57,6 @@ Hacerlo con la clase Scanner y JOptionPane
     int numero, suma = 0;
 
     for(int i = 1; i <= 10; i++){
-        System.out.println("Digite un número: ");
         numero = Integer.parseInt(JOptionPane.showInputDialog("Digite un numero "));
         suma += numero;
     }

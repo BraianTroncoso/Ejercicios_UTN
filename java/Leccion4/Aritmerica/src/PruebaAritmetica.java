@@ -51,6 +51,16 @@ class Persona{ // Se le asigna a la clase un tipo default o package a la clase (
     this.apellido = apellido; // Del constructor, por convenio se usa el mismo nombre asi no se confunda.
 
     }
+class Imprimir(){
+    public Imprimir(){
+     super();
+    }
+    public void imprimir (Persona persona){
+    System.out.println("Persona desde la clase Imprimir" + this.persona)
+    }
 }
+
+    }
 }
+
 */
