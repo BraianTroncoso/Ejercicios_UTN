@@ -1,2 +1,2 @@
-JAVA = 5.8
+JAVA = 8.4
 PYTHON = NULL?
