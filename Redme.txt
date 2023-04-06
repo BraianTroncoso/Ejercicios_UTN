@@ -1,2 +1,2 @@
-JAVA = 9.0
+JAVA = 10.0
 PYTHON = NULL?
