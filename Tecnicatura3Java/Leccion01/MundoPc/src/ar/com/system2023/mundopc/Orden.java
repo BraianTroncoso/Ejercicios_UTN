@@ -18,8 +18,10 @@ package ar.com.system2023.mundopc;
                 this.computadora[this.contadorComputadora++] = computadora;
             }else{
                 System.out.println("Has superado el limite: " + Orden.MAX_COMPUTADORAS);
+                System.exit(0);
             }
         }
+
     //Mostrar orden
         public void mostrarOrden(){
             System.out.println("Orden #: "+this.idOrden);
