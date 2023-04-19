@@ -1,4 +1,4 @@
-JAVA = 10.0
+JAVA = 11
 PYTHON = NULL??
 PYTHON al dia clases 2023 all
 

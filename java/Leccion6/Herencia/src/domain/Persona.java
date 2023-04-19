@@ -2,7 +2,7 @@ package domain;
 
 public class Persona {
     //Atributos de herencia
-    private String nombre;
+    protected String nombre;
     protected char genero;
     protected int edad;
     protected String direccion;
@@ -13,7 +13,7 @@ public class Persona {
 
     public Persona(String nombre){ //Constructor 2
         this.nombre = nombre;
-    }
+    } //Constructor 2
 
     public Persona(String nombre, char genero, int edad, String direccion) { //Constructor 3
         this.nombre = nombre;
