@@ -4,40 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1bae7e52-8ce8-4498-b2d7-55f8b10ff171" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/domain/Persona.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/TestForEach.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Lección02/ArgumentosVariables/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Lección02/ArgumentosVariables/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Lección02/ArgumentosVariables/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Lección02/ArgumentosVariables/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Lección02/ArgumentosVariables/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Lección02/ArgumentosVariables/ArgumentosVariables.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Lección02/ArgumentosVariables/src/TestArgumentosVariables.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Lección02/BloquesInicializacion/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Lección02/BloquesInicializacion/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Lección02/BloquesInicializacion/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Lección02/BloquesInicializacion/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Lección02/BloquesInicializacion/.idea/workspace.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Lección02/BloquesInicializacion/BloquesInicializacion.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Lección02/BloquesInicializacion/src/domain/Persona.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Lección02/BloquesInicializacion/src/test/TestBloqueInicializacion.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Lección02/Enumeraciones/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Lección02/Enumeraciones/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Lección02/Enumeraciones/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Lección02/Enumeraciones/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Lección02/Enumeraciones/.idea/uiDesigner.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Lección02/Enumeraciones/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Lección02/Enumeraciones/Enumeraciones.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Lección02/Enumeraciones/src/enumeraciones/Continentes.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Lección02/Enumeraciones/src/enumeraciones/Dias.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Lección02/Enumeraciones/src/test/TestEnumeraciones.java" beforeDir="false" />
-    </list>
+    <list default="true" id="1bae7e52-8ce8-4498-b2d7-55f8b10ff171" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
