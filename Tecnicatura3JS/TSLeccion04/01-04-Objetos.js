@@ -88,3 +88,15 @@ console.log('Comenzamos a utilizar el méotodo get y set para idiomas');
 console.log(persona.lang); // Es sin parentesis por el get
 persona.lang = 'en';
 console.log(persona.lang);
+
+function Persona3(nombre, apellido, email){ // constructor
+    this.nombre = nombre;
+    this.apellido = apellido;
+    this.email = email;
+}
+
+let padre = new Persona3('Leo', 'Lopez', 'lopezl@mail.com')
+padre.nombre = 'Luis'
+console.log(padre);
+let madre = new Persona3('Laura', 'Contrera', 'contreral@mail.com');
+console.log(madre);
