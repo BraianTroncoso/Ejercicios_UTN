@@ -7,13 +7,22 @@ let persona = { // Creamos un objeto en memoria que contiene una referencia, un 
     nombre: 'Carlos',
     apellido: 'Gil',
     email: 'cgil@gmail.com',
-    edad: 30,
+    edad: 28,
+    idioma: 'es',
+    
+    get lang(){
+        return this.idioma.toUpperCase(); // Convierte las minusculas en mayusculas
+    },
+    set lang(lang){
+        return this.idioma = lang.toUpperCase();
+    },
     nombreCompleto: function(){ // Método o funcion en Js
         return this.nombre + ' ' + this.apellido; // Con this hacemos referencia al objeto, y accedemos a sus atributos.
     },
     get nombreEdad(){
         return 'El nombre es: ' +this.nombre+ ' y su edad es: '+this.edad;
     }
+
 }
 
 console.log(persona.nombre);
@@ -72,5 +81,10 @@ console.log('Forma número 4');
 let personaString = JSON.stringify(persona);
 console.log(personaString);
 
-console.log('Comenzamos a utilizar el método get')
+console.log('Comenzamos a utilizar el método get');
 console.log(persona.nombreEdad);
+
+console.log('Comenzamos a utilizar el méotodo get y set para idiomas');
+console.log(persona.lang); // Es sin parentesis por el get
+persona.lang = 'en';
+console.log(persona.lang);
