@@ -10,6 +10,9 @@ let persona = { // Creamos un objeto en memoria que contiene una referencia, un 
     edad: 30,
     nombreCompleto: function(){ // Método o funcion en Js
         return this.nombre + ' ' + this.apellido; // Con this hacemos referencia al objeto, y accedemos a sus atributos.
+    },
+    get nombreEdad(){
+        return 'El nombre es: ' +this.nombre+ ' y su edad es: '+this.edad;
     }
 }
 
@@ -68,3 +71,6 @@ console.log(peronsaArray);
 console.log('Forma número 4');
 let personaString = JSON.stringify(persona);
 console.log(personaString);
+
+console.log('Comenzamos a utilizar el método get')
+console.log(persona.nombreEdad);
