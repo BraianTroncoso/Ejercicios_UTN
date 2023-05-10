@@ -93,10 +93,49 @@ function Persona3(nombre, apellido, email){ // constructor
     this.nombre = nombre;
     this.apellido = apellido;
     this.email = email;
+    this.nombreCompleto = function(){
+        return this.nombre +' '+this.apellido;
+    }
 }
 
 let padre = new Persona3('Leo', 'Lopez', 'lopezl@mail.com')
-padre.nombre = 'Luis'
+padre.nombre = 'Luis'; // modificamos el nombre
 console.log(padre);
+console.log(padre.nombreCompleto()); // utilizamos la función
 let madre = new Persona3('Laura', 'Contrera', 'contreral@mail.com');
 console.log(madre);
+console.log(madre.nombreCompleto());
+
+// Diferentes formas de crear objetos
+// caso número 1
+let miObjeto = new Object(); // Esta es una opción formal
+// caso número 2
+let miObjeto2 = {}; // Esta forma es breve y recomendada
+
+// caso String 1
+let miCadena1 = new String('Hola');
+// caso String 2
+let miCadena2 = 'Hola'; // Esta es la sintaxis simplificada y recomendada
+
+// caso números 1
+let miNumero = new Number(1); // Es formal no recomendable
+// caso nuúmeros 2
+let miNumero2 = 1; // Sintaxis recomendada
+
+// caso boolean 1
+let miBoolean1 = new Boolean(false); // Formal
+// caso boolean 2
+let miBoolean2 = false; // Recomendada
+
+// caso Arreglos 1
+let miArreglo1 = new Array(); //Formal
+// caso Arreglos 2
+let miArreglo2 = []; // Sintaxis recomendada
+
+// caso funcion 1
+let miFuncion1 = new function(){}; // Todo despues de new es cosiderado objeto
+// caso funcion 2
+let miFuncion2 = function(){};
+
+//Uso de prototype
+
