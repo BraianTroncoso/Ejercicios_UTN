@@ -1,6 +1,6 @@
 package domain;
 
-enum TipoEscritura {
+public enum TipoEscritura {
     CLASICO ("Escritura a mano"),
     MODERNO ("Escritura digital");
 
