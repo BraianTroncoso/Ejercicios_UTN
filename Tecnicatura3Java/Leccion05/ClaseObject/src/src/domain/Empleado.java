@@ -1,4 +1,6 @@
-package domain;
+package src.domain;
+
+import java.util.Objects;
 
 public class Empleado {
     protected String nombre;
@@ -37,4 +39,26 @@ public class Empleado {
         sb.append('}');
         return sb.toString();
     }
+
+    @Override
+    public int hashCode() {
+        int result;
+        long temp;
+        result = getNombre().hashCode();
+        temp = Double.doubleToLongBits(getSueldo());
+        result = 31 * result + (int) (temp ^ (temp >>> 32));
+        return result;
+    }
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof Empleado)) return false;
+
+        Empleado empleado = (Empleado) o;
+
+        if (Double.compare(empleado.getSueldo(), getSueldo()) != 0) return false;
+        return getNombre().equals(empleado.getNombre());
+    }
+
+
 }

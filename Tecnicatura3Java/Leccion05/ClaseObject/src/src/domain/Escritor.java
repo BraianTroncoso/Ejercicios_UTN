@@ -1,4 +1,4 @@
-package domain;
+package src.domain;
 
 public class Escritor extends Empleado{
     final TipoEscritura tipoEscritura;

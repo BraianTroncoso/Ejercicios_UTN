@@ -1,4 +1,4 @@
-package domain;
+package src.domain;
 
 public class Gerente extends Empleado{
     private String departamento;

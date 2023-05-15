@@ -1,4 +1,4 @@
-package domain;
+package src.domain;
 
 public enum TipoEscritura {
     CLASICO ("Escritura a mano"),
