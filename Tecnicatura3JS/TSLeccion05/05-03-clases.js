@@ -6,15 +6,29 @@ class Persona{
     get nombre(){
         return this._nombre;
     }
+    get apellido(){
+        return this._apellido;
+    }
+
     set nombre(nombre){
-        this.nombre = nombre;
+        this._nombre = nombre;
+    }
+    set apellido(apellido){
+        this._apellido = apellido;
     }
 }
 let persona1 = new Persona ('Martin','Perez');
 console.log(persona1.nombre);
+console.log(persona1.apellido);
 persona1.nombre = 'Juan Carlos';
-console.log(persona1.nombre);
+persona1.apellido = 'Troncoso';
+console.log(persona1.nombre +' '+persona1.apellido);
+
 let persona2 = new Persona('Carlos','Lara');
 persona2.nombre = 'Maria Laura'
 console.log(persona2.nombre);
+console.log(persona2.apellido);
+persona2.nombre = 'Axel';
+persona2.nombre = 'Troncoso';
+console.log(persona2.nombre+' '+persona2.apellido)
 
