@@ -18,6 +18,20 @@ class Persona{
         this._apellido = apellido;
     }
 }
+
+class Empleado extends Persona{
+    constructor(nombre, apellido, departamento){
+        super(nombre, apellido);
+        this._departamento = departamento;
+    }
+
+    get departamento(){
+        return this.departamento;
+    }
+    set departamento(departamento){
+        return this.departamento = this.departamento;
+    }
+}
 let persona1 = new Persona ('Martin','Perez');
 console.log(persona1.nombre);
 console.log(persona1.apellido);
@@ -33,3 +47,6 @@ persona2.nombre = 'Axel';
 persona2.nombre = 'Troncoso';
 console.log(persona2.nombre+' '+persona2.apellido)
 
+let empleado1 = new Empleado('Maria','Gimenez','Sistema');
+console.log(empleado1);
+console.log(empleado1.nombre);
