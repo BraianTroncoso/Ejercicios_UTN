@@ -1,3 +1,4 @@
+//let persona3 = new Persona('Prueba','Pruebita'); // No se puede inicizalizar una clase(no aplica el hosting como en las funciones que si se pueden llamar y después declararse)
 class Persona{
     constructor(nombre, apellido){ // Sino se define el constructor js añade uno vacio de forma automatica
         this._nombre = nombre;
