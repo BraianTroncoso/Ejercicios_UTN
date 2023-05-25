@@ -11,6 +11,9 @@ class Persona{
         return this._apellido;
     }
 
+    get nombreCompleto(){
+        return this._nombre+' '+this._apellido
+    }
     set nombre(nombre){
         this._nombre = nombre;
     }
@@ -27,6 +30,13 @@ class Empleado extends Persona{
 
     get departamento(){
         return this.departamento;
+    }
+    //sobreescritura
+    get nombreCompleto(){
+        return super.nombreCompleto+', '+this._departamento;
+    }
+    get toString(){
+        return this.nombreCompleto
     }
     set departamento(departamento){
         return this.departamento = this.departamento;
@@ -50,3 +60,6 @@ console.log(persona2.nombre+' '+persona2.apellido)
 let empleado1 = new Empleado('Maria','Gimenez','Sistema');
 console.log(empleado1);
 console.log(empleado1.nombre);
+console.log(empleado1.nombreCompleto);
+console.log(empleado1.toString);
+console.log(persona1.toString);
