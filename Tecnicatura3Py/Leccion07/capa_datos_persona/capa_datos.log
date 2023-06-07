@@ -1,6 +1,53 @@
-02:05:12 PM:DEBUG[logger_base.py:12] Mensaje a nivel debug
-02:05:12 PM:INFO[logger_base.py:13] Mensaje a nivel info
-02:05:12 PM:WARNING[logger_base.py:14] Mensaje a nivel warning
-02:05:12 PM:ERROR[logger_base.py:15] Mensaje a nivel error
-02:05:12 PM:CRITICAL[logger_base.py:16] Mensaje a nivel critical
+06:19:31 PM:DEBUG[logger_base.py:12] Mensaje a nivel debug
+06:19:31 PM:INFO[logger_base.py:13] Mensaje a nivel info
+06:19:31 PM:WARNING[logger_base.py:14] Mensaje a nivel warning
+06:19:31 PM:ERROR[logger_base.py:15] Mensaje a nivel error
+06:19:31 PM:CRITICAL[logger_base.py:16] Mensaje a nivel critical
+11:30:02 AM:DEBUG[Persona.py:48] 
+            Id Persona: 1,
+            Nombre: Juan,
+            Apellido: Perez,
+            Email: jperez@mail.com
+        
+11:38:46 AM:DEBUG[Persona.py:48] 
+            Id Persona: 1,
+            Nombre: Juan,
+            Apellido: Perez,
+            Email: jperez@mail.com
+        
+11:39:30 AM:DEBUG[Persona.py:48] 
+            Id Persona: 1,
+            Nombre: Juan,
+            Apellido: Perez,
+            Email: jperez@mail.com
+        
+11:39:30 AM:DEBUG[Persona.py:50] 
+            Id Persona: None,
+            Nombre: Jose,
+            Apellido: Lepez,
+            Email: ljose@mail.com
+        
+11:39:56 AM:DEBUG[Persona.py:48] 
+            Id Persona: 1,
+            Nombre: Juan,
+            Apellido: Perez,
+            Email: jperez@mail.com
+        
+11:39:56 AM:DEBUG[Persona.py:50] 
+            Id Persona: None,
+            Nombre: Jose,
+            Apellido: Lepez,
+            Email: ljose@mail.com
+        
+11:39:56 AM:DEBUG[Persona.py:52] 
+            Id Persona: 1,
+            Nombre: None,
+            Apellido: None,
+            Email: None
+        
+12:35:25 PM:ERROR[conexion.py:26] Ocurrió un errorconnection to server at "127.0.0.1", port 5432 failed: FATAL:  database "test_db" does not exist
 
+12:35:54 PM:DEBUG[conexion.py:23] Conexión Exitosa: <connection object at 0x7ff225ff5540; dsn: 'user=postgres password=xxx dbname=test_bd host=127.0.0.1 port=5432', closed: 0>
+12:42:39 PM:DEBUG[conexion.py:23] Conexión Exitosa: <connection object at 0x7fa369661540; dsn: 'user=postgres password=xxx dbname=test_bd host=127.0.0.1 port=5432', closed: 0>
+12:43:19 PM:DEBUG[conexion.py:23] Conexión Exitosa: <connection object at 0x7f50e5094540; dsn: 'user=postgres password=xxx dbname=test_bd host=127.0.0.1 port=5432', closed: 0>
+12:43:19 PM:DEBUG[conexion.py:37] Se abrió correctamente el cursor: <cursor object at 0x7f50e5092a90; closed: 0>
