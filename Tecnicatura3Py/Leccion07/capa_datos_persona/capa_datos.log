@@ -51,3 +51,72 @@
 12:42:39 PM:DEBUG[conexion.py:23] Conexión Exitosa: <connection object at 0x7fa369661540; dsn: 'user=postgres password=xxx dbname=test_bd host=127.0.0.1 port=5432', closed: 0>
 12:43:19 PM:DEBUG[conexion.py:23] Conexión Exitosa: <connection object at 0x7f50e5094540; dsn: 'user=postgres password=xxx dbname=test_bd host=127.0.0.1 port=5432', closed: 0>
 12:43:19 PM:DEBUG[conexion.py:37] Se abrió correctamente el cursor: <cursor object at 0x7f50e5092a90; closed: 0>
+02:23:09 PM:DEBUG[conexion.py:23] Conexión Exitosa: <connection object at 0x7f3b084d1680; dsn: 'user=postgres password=xxx dbname=test_bd host=127.0.0.1 port=5432', closed: 0>
+02:23:09 PM:DEBUG[conexion.py:37] Se abrió correctamente el cursor: <cursor object at 0x7f3b0742e400; closed: 0>
+02:23:09 PM:DEBUG[persona_dao.py:39] 
+            Id Persona: 1,
+            Nombre: Juan Carlos,
+            Apellido: Roldan,
+            Email: jcroldan@mail.com
+        
+02:23:09 PM:DEBUG[persona_dao.py:39] 
+            Id Persona: 2,
+            Nombre: Carla,
+            Apellido: Gomez
+,
+            Email: kgomez@mail.com
+        
+02:23:09 PM:DEBUG[persona_dao.py:39] 
+            Id Persona: 9,
+            Nombre: Carlos,
+            Apellido: Lara,
+            Email: clara@mail.com
+        
+02:23:09 PM:DEBUG[persona_dao.py:39] 
+            Id Persona: 10,
+            Nombre: Marcos,
+            Apellido: Canto,
+            Email: mcanto@mail.com
+        
+02:23:09 PM:DEBUG[persona_dao.py:39] 
+            Id Persona: 11,
+            Nombre: Juan,
+            Apellido: Juarez,
+            Email: jcjuarez@mail.com
+        
+02:23:09 PM:DEBUG[persona_dao.py:39] 
+            Id Persona: 13,
+            Nombre: Maria,
+            Apellido: Esparza,
+            Email: mesparza@mail.com
+        
+02:23:09 PM:DEBUG[persona_dao.py:39] 
+            Id Persona: 19,
+            Nombre: Carlos,
+            Apellido: Lara,
+            Email: clara@mail.com
+        
+02:23:09 PM:DEBUG[persona_dao.py:39] 
+            Id Persona: 20,
+            Nombre: Carlos,
+            Apellido: Lara,
+            Email: clara@mail.com
+        
+02:23:09 PM:DEBUG[persona_dao.py:39] 
+            Id Persona: 21,
+            Nombre: Braian,
+            Apellido: Troncoso,
+            Email: bTroncoso@mail.com
+        
+02:23:09 PM:DEBUG[persona_dao.py:39] 
+            Id Persona: 22,
+            Nombre: Juan Carlos,
+            Apellido: Perez,
+            Email: jPerez@mail.com
+        
+02:23:09 PM:DEBUG[persona_dao.py:39] 
+            Id Persona: 23,
+            Nombre: Alex,
+            Apellido: Rojas,
+            Email: arojas@mail.com
+        
