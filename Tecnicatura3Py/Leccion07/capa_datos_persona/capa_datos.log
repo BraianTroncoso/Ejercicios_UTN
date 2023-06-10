@@ -120,3 +120,18 @@
             Apellido: Rojas,
             Email: arojas@mail.com
         
+02:48:31 PM:DEBUG[conexion.py:23] Conexión Exitosa: <connection object at 0x7f57dfda9680; dsn: 'user=postgres password=xxx dbname=test_bd host=127.0.0.1 port=5432', closed: 0>
+02:48:31 PM:DEBUG[conexion.py:37] Se abrió correctamente el cursor: <cursor object at 0x7f57ded04400; closed: 0>
+02:50:11 PM:DEBUG[conexion.py:23] Conexión Exitosa: <connection object at 0x7f5642ffe680; dsn: 'user=postgres password=xxx dbname=test_bd host=127.0.0.1 port=5432', closed: 0>
+02:50:11 PM:DEBUG[conexion.py:37] Se abrió correctamente el cursor: <cursor object at 0x7f5641f59400; closed: 0>
+02:51:13 PM:DEBUG[conexion.py:23] Conexión Exitosa: <connection object at 0x7f3734591680; dsn: 'user=postgres password=xxx dbname=test_bd host=127.0.0.1 port=5432', closed: 0>
+02:51:13 PM:DEBUG[conexion.py:37] Se abrió correctamente el cursor: <cursor object at 0x7f37334ec400; closed: 0>
+02:53:26 PM:DEBUG[conexion.py:23] Conexión Exitosa: <connection object at 0x7f7d663de680; dsn: 'user=postgres password=xxx dbname=test_bd host=127.0.0.1 port=5432', closed: 0>
+02:53:26 PM:DEBUG[conexion.py:37] Se abrió correctamente el cursor: <cursor object at 0x7f7d65339400; closed: 0>
+02:53:26 PM:DEBUG[persona_dao.py:42] Persona insertada: 
+            Id Persona: None,
+            Nombre: Pedro,
+            Apellido: Romero,
+            Email: promero@mail.com
+        
+02:53:26 PM:DEBUG[persona_dao.py:51] Personas insertadas: 1
