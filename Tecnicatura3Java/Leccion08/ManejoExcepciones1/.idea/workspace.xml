@@ -5,7 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="73469abc-10cd-49d8-887d-516453eadc07" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/Captura de pantalla_2023-06-22_00-58-51.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Captura de pantalla_2023-06-22_00-39-15.png" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/TestExcepciones.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/TestExcepciones.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -73,16 +75,5 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/test/TestExcepciones.java</url>
-          <line>4</line>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>
