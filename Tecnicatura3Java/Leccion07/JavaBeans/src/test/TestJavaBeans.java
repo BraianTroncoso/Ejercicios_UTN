@@ -12,3 +12,7 @@ public class TestJavaBeans {
         System.out.println("Apellido: "+ persona.getApellido());
     }
 }
+
+// El concepto de serialización se define como convertir una clase o archivo en bits(0 y 1)
+// para luego implementar dicha clase en otro servidor donde se va a deserializar y sera convertido
+// nuevamente en la clase creada, es un similar como cuando usamos json.
