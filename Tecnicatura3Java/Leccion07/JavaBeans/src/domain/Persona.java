@@ -7,7 +7,7 @@ public class Persona implements Serializable {
     private String apellido;
 
     // Constructor vacio obligatorio
-    Persona(){};
+    public Persona(){};
 
     public Persona(String nombre, String apellido) {
         this.nombre = nombre;
