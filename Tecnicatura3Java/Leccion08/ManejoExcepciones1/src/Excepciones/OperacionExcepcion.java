@@ -6,5 +6,5 @@ public class OperacionExcepcion extends Exception{
         super(mensaje);
     }
 
-    
+
 }
