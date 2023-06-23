@@ -8,9 +8,19 @@ public class ListadoPersonasApp {
         // Definimos la lista fuera del ciclo while
         List<Persona> personas = new ArrayList<>();
         var salir = false;
-        
-        while (!salir){
 
-        }
+        while (!salir){
+            mostrarMenu();
+            System.out.println(); // Agregamos un salto de linea
+        }// Fin del ciclo while
+    }// Fin del main
+    public static void mostrarMenu(){
+        // Mostramos las opciones
+        System.out.println("""
+                ******* Listado de Personas *******
+                1. Agregar
+                2. Listar
+                3. Salir
+                """);
     }
-}
+}// Fin de la clase
