@@ -10,6 +10,15 @@ public class Persona {
     public Persona(){
         this.id = ++Persona.numeroPersonas;
     }
+    // Al crear mas de un constructor se le conoce como sobrecarga de constructores
+    public Persona(String nombre, String tel, String email){
+        this();// Accedemos al constructor vacio(por eso ahora tiene color, porque lo estamos usando)
+        this.nombre = nombre;
+        this.tel = tel;
+        this.email = email;
+    }
+
+    // Creamos los métodos setter y getter para acceder a nuestra clase, esto se le conoce como encapsulamiento
     public int getId() {
         return id;
     }
