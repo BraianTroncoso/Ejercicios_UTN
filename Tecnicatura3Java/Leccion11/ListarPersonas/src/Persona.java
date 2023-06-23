@@ -6,7 +6,7 @@ public class Persona {
     private static int numeroPersonas = 0;
 
 
-    //Creamos un constructor vacio
+    // Creamos un constructor vacio
     public Persona(){
         this.id = ++Persona.numeroPersonas;
     }
@@ -18,7 +18,8 @@ public class Persona {
         this.email = email;
     }
 
-    // Creamos los métodos setter y getter para acceder a nuestra clase, esto se le conoce como encapsulamiento
+    // Creamos los métodos setter y getter para acceder a nuestra clase porque al definirlo como
+    // private lo estamos encapsulando y debes poder acceder a ellos
     public int getId() {
         return id;
     }
@@ -51,6 +52,9 @@ public class Persona {
         this.email = email;
     }
 
+    // Nos marca override que significa sobre escribir
+    // Esto sucede porque estamos sobreEscribiendo un método de la clase padre Object
+    // También se le conoce como polimorfismo
     @Override
     public String toString() {
         final StringBuilder sb = new StringBuilder("Persona{");
