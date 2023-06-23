@@ -14,13 +14,37 @@ public class CalculadoraUTN {
                 """);
         System.out.print("¿Qué operación desea realizar?: ");
         var operacion = Integer.parseInt(entrada.nextLine());
-        if(operacion >= 1){
+        if(operacion >= 1 && operacion <=4){
             System.out.print("Digite el valor para operando 1: ");
             var operando1 = Integer.parseInt(entrada.nextLine());
             System.out.print("Digite el valor para operando 2: ");
             var operando2 = Integer.parseInt(entrada.nextLine());
-            var resultado = operando1 + operando2;
-            System.out.println("resultado = " + resultado);
+
+            int resultado;
+            switch (operacion){
+                case 1 -> { // Suma
+                    resultado = operando1 + operando2;
+                    System.out.println("El resultado de la suma es: " + resultado);
+                }
+                case 2 -> { // Resta
+                    resultado = operando1 - operando2;
+                    System.out.println("El resultado de la resta es: " + resultado);
+                }
+                case 3 -> { // Multiplicación
+                    resultado = operando1 * operando2;
+                    System.out.println("El resultado de la multiplicación es: " + resultado);
+                }
+                case 4 -> { //División
+                    resultado = operando1 / operando2;
+                    System.out.println("El resultado de la división es: " + resultado);
+                }default -> System.out.println("Operación erronea: " + operacion);
+
+            }// Fin del switch
+
+        } else if (operacion == 5) {
+            System.out.println("Hasta pronto...");
+        }else {
+            System.out.println("Operación erronea: " + operacion);
         }
 
     }
