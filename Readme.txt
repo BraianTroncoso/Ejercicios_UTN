@@ -1,4 +1,1 @@
-JAVA = 12
-PYTHON = NULL??
-Clases al dia
-
+todo al día.
