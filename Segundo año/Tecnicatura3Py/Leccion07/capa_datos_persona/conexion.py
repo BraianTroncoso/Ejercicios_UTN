@@ -44,6 +44,7 @@ class Conexion:
     @classmethod
     def liberarConexion(cls, conexion):
         cls.obtenerPool().putconn(conexion)
+        log.debug(f'Regresamos la conexión del pool{conexion}')
 
 
 if __name__ == '__main__':
