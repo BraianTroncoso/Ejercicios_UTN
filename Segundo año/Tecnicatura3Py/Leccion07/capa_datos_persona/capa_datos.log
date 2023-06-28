@@ -303,3 +303,18 @@
 01:42:50 AM:DEBUG[conexion.py:18] Conexion obtenida del pool: <connection object at 0x7fa4cf370540; dsn: 'user=postgres password=xxx dbname=test_bd host=127.0.0.1 port=5432', closed: 0>
 01:42:50 AM:DEBUG[conexion.py:18] Conexion obtenida del pool: <connection object at 0x7fa4cf3702c0; dsn: 'user=postgres password=xxx dbname=test_bd host=127.0.0.1 port=5432', closed: 0>
 01:42:50 AM:DEBUG[conexion.py:18] Conexion obtenida del pool: <connection object at 0x7fa4cf370a40; dsn: 'user=postgres password=xxx dbname=test_bd host=127.0.0.1 port=5432', closed: 0>
+03:11:13 AM:DEBUG[cursor_del_pool.py:11] Inicio del método with y __enter__
+03:11:13 AM:DEBUG[conexion.py:36] Creacion del pool exitosa: <psycopg2.pool.SimpleConnectionPool object at 0x7f241638be50>
+03:11:13 AM:DEBUG[conexion.py:18] Conexion obtenida del pool: <connection object at 0x7f24161f7680; dsn: 'user=postgres password=xxx dbname=test_bd host=127.0.0.1 port=5432', closed: 0>
+03:11:13 AM:DEBUG[cursor_del_pool.py:30] Estamos en el bloque with
+03:11:13 AM:DEBUG[cursor_del_pool.py:18] Se ejecuta el método exit
+03:11:13 AM:DEBUG[cursor_del_pool.py:21] Ocurrió un error <class 'AttributeError'>
+03:11:13 AM:DEBUG[conexion.py:47] Regresamos la conexión del pool<connection object at 0x7f24161f7680; dsn: 'user=postgres password=xxx dbname=test_bd host=127.0.0.1 port=5432', closed: 0>
+03:11:41 AM:DEBUG[cursor_del_pool.py:11] Inicio del método with y __enter__
+03:11:41 AM:DEBUG[conexion.py:36] Creacion del pool exitosa: <psycopg2.pool.SimpleConnectionPool object at 0x7f7c3bcb1e50>
+03:11:41 AM:DEBUG[conexion.py:18] Conexion obtenida del pool: <connection object at 0x7f7c3bb1d680; dsn: 'user=postgres password=xxx dbname=test_bd host=127.0.0.1 port=5432', closed: 0>
+03:11:41 AM:DEBUG[cursor_del_pool.py:30] Estamos en el bloque with
+03:11:41 AM:DEBUG[cursor_del_pool.py:32] [(2, 'Carla', 'Gomez\n', 'kgomez@mail.com'), (10, 'Marcos', 'Canto', 'mcanto@mail.com'), (13, 'Maria', 'Esparza', 'mesparza@mail.com'), (21, 'Braian', 'Troncoso', 'bTroncoso@mail.com'), (22, 'Juan Carlos', 'Perez', 'jPerez@mail.com'), (11, 'Juan', 'Juarez', 'jcjuarez@mail.com'), (23, 'Alex', 'Rojas', 'arojas@mail.com'), (24, 'Pedro', 'Romero', 'promero@mail.com'), (25, 'Omero', 'Ramos', 'omeror@mail.com'), (1, 'Juan Jose', 'Pena', 'jjpena@mail.com')]
+03:11:41 AM:DEBUG[cursor_del_pool.py:18] Se ejecuta el método exit
+03:11:41 AM:DEBUG[cursor_del_pool.py:24] Commit de la transacción
+03:11:41 AM:DEBUG[conexion.py:47] Regresamos la conexión del pool<connection object at 0x7f7c3bb1d680; dsn: 'user=postgres password=xxx dbname=test_bd host=127.0.0.1 port=5432', closed: 0>
