@@ -19,13 +19,13 @@ public class EstudianteDAO {
         ResultSet rs; // Recibe el resultado de la base de datos
         // Creamos un objeto del tipo conexion
         Connection con = getConecction();
-        String sql = "SELECT * FROM estudiantes ORDEN BY estudiantes2022";
+        String sql = "SELECT * FROM estudiantes2022";
         try {
             ps = con.prepareStatement(sql);
             rs = ps.executeQuery();
             while (rs.next()){
                var estudiante = new Estudiante();
-               estudiante.setIdEstudiante(rs.getInt("idestudiante2022"));
+               estudiante.setIdEstudiante(rs.getInt("idestudiantes2022"));
                estudiante.setNombre(rs.getString("nombre"));
                estudiante.setApellido(rs.getString("apellido"));
                estudiante.setEmail(rs.getString("email"));
