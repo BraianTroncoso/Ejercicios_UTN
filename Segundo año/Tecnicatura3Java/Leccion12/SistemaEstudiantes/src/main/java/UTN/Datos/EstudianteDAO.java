@@ -12,7 +12,7 @@ import java.util.List;
 
 public class EstudianteDAO {
     // Método listar
-    public List<Estudiante> listar(){
+    public List<Estudiante> listarEstudiantes(){
         List<Estudiante> estudiantes = new ArrayList<>();
         // Creamos ahora algunos objetos que son necesarios para comunicarnos con la BDD
         PreparedStatement ps; // Envia la sentencia a la base de datos(los querys)
@@ -42,7 +42,16 @@ public class EstudianteDAO {
             } catch (Exception e){
                 System.out.println("Ocurrió un error al cerrar la conexión");
             }
-        }
+        }// Fin del finally
     return estudiantes;
+    } // Fin del método listar
+
+    public static void main(String[] args) {
+        // Listar los estudiantes
+
+        var estudianteDAO = new EstudianteDAO();
+        System.out.println("Listado de estudiantes: ");
+        List<Estudiante> estudiantes = estudianteDAO.listarEstudiantes();
+        estudiantes.forEach(System.out::println); // Funcion Lambda para imprimir
     }
 }
