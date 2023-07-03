@@ -11,6 +11,35 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class EstudianteDAO {
+
+    // Método por id -> find by id
+    public boolean buscarEstudiantePorId(Estudiante estudiante){
+        PreparedStatement ps; // Envia la sentencia a la base de datos(los querys)
+        ResultSet rs; // Recibe el resultado de la base de datos
+        Connection con = getConecction();
+        String sql = "SELECT * FROM estudiantes2022 WHERE idestudiantes2022=?";
+        try {
+        ps = con.prepareStatement(sql);
+        ps.setInt(1,estudiante.getIdEstudiante());
+        rs = ps.executeQuery();
+        if(rs.next()){
+            estudiante.setNombre(rs.getString("nombre"));
+            estudiante.setApellido(rs.getString("apellido"));
+            estudiante.setEmail(rs.getString("email"));
+            estudiante.setTelefono(rs.getString("telefono"));
+            return true; // Se encontró un registro
+        }
+        }catch (Exception e){
+            System.out.println("Ocurrió un error al buscar el estudiante: "+e.getMessage());
+        }finally {
+            try {
+                con.close();
+            }catch (Exception e){
+                System.out.println("Ocurrió un error al cerrar la conexión: "+e.getMessage());
+            }
+        }
+        return false;
+    }
     // Método listar
     public List<Estudiante> listarEstudiantes(){
         List<Estudiante> estudiantes = new ArrayList<>();
