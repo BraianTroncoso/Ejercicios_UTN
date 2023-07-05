@@ -72,7 +72,7 @@ public class EstudianteDAO {
     public boolean modificarEstudiante(Estudiante estudiante){
         PreparedStatement ps;
         Connection con = getConecction();
-        String sql = "UPDATE estudiantes2022 SET (nombre=?, apellido=?, telefono=?, email=?) WHERE idestudiantes2022=?";
+        String sql = "UPDATE estudiantes2022 SET nombre=?, apellido=?, telefono=?, email=? WHERE idestudiantes2022=?";
         try {
             ps = con.prepareStatement(sql);
             ps.setString(1, estudiante.getNombre());
@@ -129,11 +129,28 @@ public class EstudianteDAO {
     } // Fin del método listar
 
     public static void main(String[] args) {
-        // Listar los estudiantes
 
         var estudianteDAO = new EstudianteDAO();
+        // Modificar estudiante
+        var estudianteModificado= new Estudiante(6, "Juan Carlos","Juarez","129123931","JCjuarez@mail.com");
+        var modificado = estudianteDAO.modificarEstudiante(estudianteModificado);
+        if(modificado)
+            System.out.println("Estudiante modificado: "+estudianteModificado);
+        else
+            System.out.println("No se modificó el estudiante: "+estudianteModificado);
+
+        // Listar los estudiantes
         System.out.println("Listado de estudiantes: ");
         List<Estudiante> estudiantes = estudianteDAO.listarEstudiantes();
         estudiantes.forEach(System.out::println); // Funcion Lambda para imprimir
+
+
+      /*  var estudianteDao = new EstudianteDAO();
+        var nuevoEstudiante = new Estudiante("Carlos", "Lara", "291923", "CarlosL@mail.com");
+        var agregado = estudianteDao.agregarEstudiante(nuevoEstudiante);
+        if (agregado)
+            System.out.println("Se agregó un nuevo estudiante: "+nuevoEstudiante);
+        else
+            System.out.println("No se pudo agregar el nuevo estudiante: "+nuevoEstudiante);*/
     }
 }
