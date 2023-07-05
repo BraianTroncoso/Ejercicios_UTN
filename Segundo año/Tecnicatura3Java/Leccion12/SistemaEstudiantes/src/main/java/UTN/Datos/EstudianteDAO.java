@@ -46,6 +46,15 @@ public class EstudianteDAO {
         PreparedStatement ps;
         Connection con = getConecction();
         String sql = "INSERT INTO estudiantes2022(nombre, apellido, telefono, email) VALUES (?, ?, ?, ?)";
+        try{
+            ps = con.prepareStatement(sql);
+            ps.setString(1, estudiante.getNombre());
+            ps.setString(2, estudiante.getApellido());
+            ps.setString(3, estudiante.getTelefono());
+            ps.setString(4, estudiante.getEmail());
+        }catch (Exception e){
+            System.out.println("Ocurrió un error al intentar agregar un nuevo estudiante");
+        }
     }
     // Método listar
     public List<Estudiante> listarEstudiantes(){
