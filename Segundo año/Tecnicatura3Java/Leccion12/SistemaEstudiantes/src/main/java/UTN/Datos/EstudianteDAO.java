@@ -52,10 +52,20 @@ public class EstudianteDAO {
             ps.setString(2, estudiante.getApellido());
             ps.setString(3, estudiante.getTelefono());
             ps.setString(4, estudiante.getEmail());
+            ps.execute();
+            return true;
         }catch (Exception e){
-            System.out.println("Ocurrió un error al intentar agregar un nuevo estudiante");
-        }
-    }
+            System.out.println("Ocurrió un error al intentar agregar un nuevo estudiante"+e.getMessage());
+        }// Fin del catch
+        finally {
+            try {
+                con.close();
+            }catch (Exception e){
+                System.out.println("Ocurrió un error al intentar cerrar la conexión"+e.getMessage());
+            } //Fin del catch
+        } // Fin del finally
+        return false;
+    }// Fin del método agregar
     // Método listar
     public List<Estudiante> listarEstudiantes(){
         List<Estudiante> estudiantes = new ArrayList<>();
