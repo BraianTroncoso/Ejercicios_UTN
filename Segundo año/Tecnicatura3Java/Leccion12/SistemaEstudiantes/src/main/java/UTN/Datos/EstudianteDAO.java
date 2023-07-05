@@ -36,9 +36,16 @@ public class EstudianteDAO {
                 con.close();
             }catch (Exception e){
                 System.out.println("Ocurrió un error al cerrar la conexión: "+e.getMessage());
-            }
-        }
+            } // Fin del catch
+        } // Fin del finally
         return false;
+    }
+
+    // Método agregar un nuevo estudiante
+    public boolean agregarEstudiante(Estudiante estudiante){
+        PreparedStatement ps;
+        Connection con = getConecction();
+        String sql = "INSERT INTO estudiantes2022(nombre, apellido, telefono, email) VALUES (?, ?, ?, ?)";
     }
     // Método listar
     public List<Estudiante> listarEstudiantes(){
