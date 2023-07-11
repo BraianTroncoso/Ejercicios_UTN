@@ -1,1 +1,3 @@
-todo al día.
+JAVA: AL DIA
+JAVASCRIPT: AL DIA
+PYTHON: AL DIA
