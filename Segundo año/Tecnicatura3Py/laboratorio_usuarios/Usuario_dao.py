@@ -51,3 +51,28 @@ class UsuarioDAO:
                 cursor.execute(cls._ELIMINAR, valores)
                 log.debug(f'Usuario eliminado: {usuario}')
                 return cursor.rowcount
+
+
+
+
+if __name__ == '__main__':
+    # Eliminar un registro
+
+     usuario1 = Usuario(id_usuario=1)
+     usuarios_eliminados = UsuarioDAO.eliminar(usuario1)
+     log.debug(f'Usuarios eliminados: {usuarios_eliminados}')
+
+    # Actualizar un registro
+     usuario1 = Usuario(1,'Juan', '891328132')
+     usuarios_actualizados = UsuarioDAO.actualizar(usuario1)
+     log.debug(f'Personas actualizadas: {personas_actualizadas}')
+
+    # Insertar un registro
+     usuario1 = Usuario(username='Mateo',password='Torres')
+     usuarios_insertados = UsuarioDAO.insertar(usuario1)
+     log.debug(f'Usuarios insertados: {usuarios_insertados}')
+
+    # Selecionar objetos
+usuarios = UsuarioDAO.selecionar()
+for usuario in usuarios:
+    log.debug(usuario)                
