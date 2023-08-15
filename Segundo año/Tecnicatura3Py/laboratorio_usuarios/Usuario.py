@@ -1,7 +1,3 @@
-from laboratorio_usuarios.Usuario import Usuario
-from laboratorio_usuarios.conexion import Conexion
-from laboratorio_usuarios.cursor_del_pool import CursorDelPool
-from laboratorio_usuarios.logger_base import log
 from logger_base import log
 
 class Usuario:
@@ -20,21 +16,21 @@ class Usuario:
     @property
     def id_usuario(self):
         return self._id_usuario
-    @id_persona.setter
+    @id_usuario.setter
     def id_usuario(self, id_usuario):
         self._id_usuario = id_usuario
 
     @property
     def username(self):
         return self._username
-    @nombre.setter
+    @username.setter
     def username(self, username):
         self._username = username
 
     @property
     def password(self):
         return self._password
-    @apellido.setter
+    @password.setter
     def password(self, password):
         self._password = password
     
