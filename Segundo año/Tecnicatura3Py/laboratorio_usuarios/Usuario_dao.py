@@ -8,7 +8,7 @@ class UsuarioDAO:
         Delete -> Eliminar
     """
         _SELECIONAR='SELECT * FROM usuario ORDER BY id_usuario'
-        _INSERTAR='INSERT INTO usuario(username, password) VALUES(%s, %s, %s)'
+        _INSERTAR='INSERT INTO usuario(username, password) VALUES(%s, %s)'
         _ACTUALIZAR='UPDATE usuario SET username=%s, password=%s, WHERE id_usuario=%s'
         _ELIMINAR='DELETE FROM usuario WHERE id_usuario=%s'
 
