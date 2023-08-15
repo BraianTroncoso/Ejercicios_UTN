@@ -16,7 +16,7 @@ class Usuario:
             Password: {self._password}
         '''
 
-    
+    # Métodos getter y setter
     @property
     def id_usuario(self):
         return self._id_usuario
