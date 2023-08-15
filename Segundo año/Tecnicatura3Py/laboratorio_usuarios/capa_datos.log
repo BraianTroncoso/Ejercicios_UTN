@@ -248,3 +248,42 @@
             Password: Troncoso
         
 10:54:25 PM:INFO[menu_app_usuario.py:18] Salimos de la aplicación, Hasta prontor
+11:42:58 PM:INFO[menu_app_usuario.py:24] Usuario insertado correctamente: 1
+11:43:32 PM:INFO[menu_app_usuario.py:17] 
+            Id Usuario: 2,
+            Username: Javier,
+            Password: Milei
+        
+11:43:32 PM:INFO[menu_app_usuario.py:17] 
+            Id Usuario: 2,
+            Username: Braian,
+            Password: Troncoso
+        
+11:43:32 PM:INFO[menu_app_usuario.py:17] 
+            Id Usuario: 3,
+            Username: Nicolas,
+            Password: 1234
+        
+11:43:45 PM:INFO[menu_app_usuario.py:24] Usuario insertado correctamente: 1
+11:43:47 PM:INFO[menu_app_usuario.py:17] 
+            Id Usuario: 2,
+            Username: Javier,
+            Password: Milei
+        
+11:43:47 PM:INFO[menu_app_usuario.py:17] 
+            Id Usuario: 2,
+            Username: Braian,
+            Password: Troncoso
+        
+11:43:47 PM:INFO[menu_app_usuario.py:17] 
+            Id Usuario: 3,
+            Username: Nicolas,
+            Password: 1234
+        
+11:43:47 PM:INFO[menu_app_usuario.py:17] 
+            Id Usuario: 4,
+            Username: Javier,
+            Password: 0201921
+        
+11:43:53 PM:INFO[menu_app_usuario.py:40] Usuario eliminado: 1
+11:43:56 PM:INFO[menu_app_usuario.py:43] Salimos de la aplicación, Hasta pronto
