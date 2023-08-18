@@ -1,4 +1,4 @@
-package UTN;
+package UTN.Presentacion;
 
 import UTN.Conexion.Conexion;
 import UTN.Datos.EstudianteDAO;
@@ -6,7 +6,7 @@ import UTN.Dominio.Estudiante;
 
 import java.util.Scanner;
 
-public class Main {
+public class SistemaEstudiantesApp {
     public static void main(String[] args) {
         var conexion = Conexion.getConecction();
         if (conexion != null){
