@@ -165,14 +165,14 @@ public class EstudianteDAO {
 
 
         // Eliminar estudiante con id 3
-        var estudianteEliminar = new Estudiante(3);
-        var eliminado = estudianteDAO.eliminarEstudiante(estudianteEliminar);
-        if (eliminado)
-            System.out.println("Estudiante eliminado: "+ estudianteEliminar);
-        else
-            System.out.println("No se pudo eliminar el estudiante: "+ estudianteEliminar);
+        // var estudianteEliminar = new Estudiante(3);
+        // var eliminado = estudianteDAO.eliminarEstudiante(estudianteEliminar);
+        // if (eliminado)
+        //    System.out.println("Estudiante eliminado: "+ estudianteEliminar);
+        //else
+        //    System.out.println("No se pudo eliminar el estudiante: "+ estudianteEliminar);
 
-        
+
         // Listar los estudiantes
         System.out.println("Listado de estudiantes: ");
         List<Estudiante> estudiantes = estudianteDAO.listarEstudiantes();
