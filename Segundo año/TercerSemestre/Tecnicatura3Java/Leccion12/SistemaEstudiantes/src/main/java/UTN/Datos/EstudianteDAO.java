@@ -128,6 +128,30 @@ public class EstudianteDAO {
     return estudiantes;
     } // Fin del método listar
 
+    public boolean eliminarEstudiante(Estudiante estudiante){
+        PreparedStatement ps;
+        Connection con = getConecction();
+        String sql = "DELETE FROM estudiantes2022 WHERE idestudiantes2022=?";
+        try {
+            ps = con.prepareStatement(sql);
+            ps.setInt(1, estudiante.getIdEstudiante());
+            ps.execute();
+            return true;
+        }catch (Exception e){
+            System.out.println("Error al eliminar eestudiante: "+e.getMessage());
+        }
+        finally {
+            try {
+                con.close();
+            }catch (Exception e){
+                System.out.println("Error al cerrar la conexion: "+e.getMessage());
+            }
+        }
+    return false;
+    }
+
+
+    // main
     public static void main(String[] args) {
 
         var estudianteDAO = new EstudianteDAO();
