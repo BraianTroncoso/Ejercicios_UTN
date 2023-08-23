@@ -155,6 +155,7 @@ public class EstudianteDAO {
     public static void main(String[] args) {
 
         var estudianteDAO = new EstudianteDAO();
+
         // Modificar estudiante
         // var estudianteModificado= new Estudiante(6, "Juan Carlos","Juarez","129123931","JCjuarez@mail.com");
         // var modificado = estudianteDAO.modificarEstudiante(estudianteModificado);
