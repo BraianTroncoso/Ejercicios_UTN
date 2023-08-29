@@ -17,7 +17,8 @@
             <!-- %-5level - Left justification flag - Use spaces for right padding if characters < 5 -->
             <!-- %logger{36} - Abbreviate -->
 
-            <!-- [Date and time] [Thread] LoggingLevel : LoggerName - Logging message -->
+            <!-- [Date and time] [Thread] LoggingLevel : LoggerName - Logging message
+             Patron de salida para simplificar todo lo que hay en consola-->
             <pattern>[%thread] %-5level: %logger - %msg%n</pattern>
         </encoder>
     </appender>
