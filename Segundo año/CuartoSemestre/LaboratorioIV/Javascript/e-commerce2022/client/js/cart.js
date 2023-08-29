@@ -3,6 +3,7 @@ const modalOverlay = document.getElementById("modal-overlay");
 
 const cartBtn = document.getElementById("cart-btn");
 const displayCart = () =>{
+    modalContainer.innerHTML = "";
     modalContainer.style.display = "block";
     modalOverlay.style.display = "block";
 
