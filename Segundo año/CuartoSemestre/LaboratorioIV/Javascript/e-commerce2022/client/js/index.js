@@ -1,5 +1,5 @@
 const shopContent = document.getElementById("shopContent")
-const cart = [];
+const cart = []; // Este es un array vacio
 
 productos.forEach((product)=> {
     const content = document.createElement("div");
