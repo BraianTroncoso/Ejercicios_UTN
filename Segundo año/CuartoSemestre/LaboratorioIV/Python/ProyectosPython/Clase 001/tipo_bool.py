@@ -28,3 +28,32 @@ valor = 'Hola' # True
 resultado = bool(valor)
 print(f'valor: {valor}, Resultado: {resultado}')
 
+# Tipo colecciones -> False para colecciones vacias
+# Tipo colecciones -> True para todas las demas
+# Lista
+valor = [] # False
+resultado = bool(valor)
+print(f'valor de una lista vacia: {valor}, Resultado: {resultado}')
+
+valor = [2, 3, 4] # True
+resultado = bool(valor)
+print(f'valor de una lista con elementos: {valor}, Resultado: {resultado}')
+
+# Tupla
+
+valor = () # False
+resultado = bool(valor)
+print(f'valor con una tupla vacia: {valor}, Resultado: {resultado}')
+
+valor = (5,) # True
+resultado = bool(valor)
+print(f'valor con una tupla con elementos: {valor}, Resultado: {resultado}')
+
+# Diccionario
+valor = {} # False
+resultado = bool(valor)
+print(f'valor con un diccionario vacio: {valor}, Resultado: {resultado}')
+
+valor = {'Nombre': 'Juan', 'Apellido': 'Perez'} # True
+resultado = bool(valor)
+print(f'valor con un diccionario con elementos: {valor}, Resultado: {resultado}')
