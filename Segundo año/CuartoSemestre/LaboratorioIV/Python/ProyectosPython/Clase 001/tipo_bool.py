@@ -57,3 +57,23 @@ print(f'valor con un diccionario vacio: {valor}, Resultado: {resultado}')
 valor = {'Nombre': 'Juan', 'Apellido': 'Perez'} # True
 resultado = bool(valor)
 print(f'valor con un diccionario con elementos: {valor}, Resultado: {resultado}')
+
+# Sentencias de control con bool
+
+if (1,): # Se puede probar con todos los ejemplos dados en esta clase que estan en la parte superior
+    print('Regresa verdadero')
+else:
+    print('Regresa falso')
+
+# Ciclos
+
+variable = 0
+while variable: # False
+    if '':
+        print('Regresa verdadero ciclo')
+    else:
+        print('Regresa falso ciclo') # False
+    print('Regresa verdadero entró al ciclo')
+    break
+else:
+    print('Regresa falso')
