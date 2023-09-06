@@ -34,6 +34,7 @@ productos.forEach((product)=> {
             quanty: product.quanty,
             img: product.img,
         })
+        
         console.log(cart)
     }    
     })
