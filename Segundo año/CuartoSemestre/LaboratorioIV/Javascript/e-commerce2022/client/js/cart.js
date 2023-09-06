@@ -76,6 +76,12 @@ cart.forEach((product) => {
             product.quanty++;
             displayCart();
     })
+
+    const deleteProduct = modalBody.querySelector(".delete-product");
+
+    deleteProduct.addEventListener("click",() =>{
+        deleteCartProduct(product.id);
+    });
 });
 
 
@@ -86,7 +92,7 @@ const modalFooter = document.createElement("div");
 modalFooter.className = "modal-footer";
 modalFooter.innerHTML = `
 <div class="total-price">
-${total}
+Total: $ ${total}
 </div>
 
 `;
@@ -94,4 +100,12 @@ modalContainer.append(modalFooter);
 };
 
 cartBtn.addEventListener("click", displayCart);
+
+
+const  deleteCartProduct = (id) => {
+    const foundId = cart.findIndex((element)=> element.id === id);
+    console.log(foundId)
+    cart.splice(foundId,1);
+    displayCart();
+};
 
