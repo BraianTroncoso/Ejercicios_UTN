@@ -62,6 +62,22 @@ cart.forEach((product) => {
     </div>
     `;
     modalContainer.append(modalBody);
+
+    const decrase = modalBody.querySelector(".quantity-btn-decrase");
+    decrase.addEventListener("click",()=>{
+        if(product.quanty != 1){
+            product.quanty--;
+            displayCart();
+        }
+    })
+
+    const increse = modalBody.querySelector(".quantity-btn-increse");
+    increse.addEventListener("click",()=>{
+        if(product.quanty >= 1){
+            product.quanty++;
+            displayCart();
+        }
+    })
 });
 
 
