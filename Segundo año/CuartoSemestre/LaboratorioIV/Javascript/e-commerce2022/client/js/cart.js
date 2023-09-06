@@ -73,10 +73,8 @@ cart.forEach((product) => {
 
     const increse = modalBody.querySelector(".quantity-btn-increse");
     increse.addEventListener("click",()=>{
-        if(product.quanty >= 1){
             product.quanty++;
             displayCart();
-        }
     })
 });
 
