@@ -1,7 +1,9 @@
 const modalContainer = document.getElementById("modal-container"); 
 const modalOverlay = document.getElementById("modal-overlay");
 
+
 const cartBtn = document.getElementById("cart-btn");
+
 const displayCart = () =>{
     modalContainer.innerHTML = "";
     modalContainer.style.display = "block";
@@ -29,6 +31,50 @@ const displayCart = () =>{
 
 
     modalContainer.append(modalHeader);
-}
+
+// Modal body
+cart.forEach((product) => {
+    const modalBody = document.createElement("div");
+
+    modalBody.className = "modal-body";
+    modalBody.innerHTML = `
+    <div class="product">
+
+        <img class="product-img" src"${product.img}"/>
+        <div class="product-info">
+            <h4>${product.productName}
+            </h4>
+        </div>
+
+        <div class="quantity">
+
+        <span class="quantity-btn-decrase">-</span>
+
+        <span class="quantity-input">${product.quanty}
+        </span>
+        
+        <span class="quantity-btn-increse">+</span>
+
+        </div>
+        <div class="price">${product.price * product.quanty} $
+        </div>
+        <div class="delete-product">❌</div>
+    </div>
+    `;
+    modalContainer.append(modalBody);
+});
+
+
+// Modal footer
+
+const modalFooter = document.createElement("div");
+modalFooter.className = "modal-footer";
+modalFooter.innerHTML = `
+<div class="total-price">Total :)</div>
+
+`;
+modalContainer.append(modalFooter);
+};
 
 cartBtn.addEventListener("click", displayCart);
+
