@@ -40,7 +40,7 @@ cart.forEach((product) => {
     modalBody.innerHTML = `
     <div class="product">
 
-        <img class="product-img" src"${product.img}"/>
+        <img class="product-img" src="${product.img}"/>
         <div class="product-info">
             <h4>${product.productName}
             </h4>
