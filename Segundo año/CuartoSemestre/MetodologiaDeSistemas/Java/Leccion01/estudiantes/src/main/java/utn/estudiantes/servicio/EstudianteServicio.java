@@ -29,11 +29,11 @@ public class EstudianteServicio implements IServicioEstudiante{
 
     @Override
     public void agregarEstudiante(Estudiante estudiante) {
-
+        estudianteRepositorio.save(estudiante);
     }
 
     @Override
     public void eliminarEstudiante(Estudiante estudiante) {
-
+        estudianteRepositorio.delete(estudiante);
     }
 }
