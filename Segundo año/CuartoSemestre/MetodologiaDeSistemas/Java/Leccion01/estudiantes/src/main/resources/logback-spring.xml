@@ -19,7 +19,8 @@
 
             <!-- [Date and time] [Thread] LoggingLevel : LoggerName - Logging message
              Patron de salida para simplificar todo lo que hay en consola-->
-            <pattern>[%thread] %-5level: %logger - %msg%n</pattern>
+            <!-- <pattern>[%thread] %-5level: %logger - %msg%n</pattern>-->
+                 <pattern>%msg</pattern>
         </encoder>
     </appender>
 
