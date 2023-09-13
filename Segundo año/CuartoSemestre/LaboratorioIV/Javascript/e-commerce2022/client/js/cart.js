@@ -1,5 +1,5 @@
-const { error } = require("console");
-const e = require("express");
+// const { error } = require("console");
+// const e = require("express");
 
 const modalContainer = document.getElementById("modal-container"); 
 const modalOverlay = document.getElementById("modal-overlay");
