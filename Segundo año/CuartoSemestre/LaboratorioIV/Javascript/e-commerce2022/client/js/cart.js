@@ -1,7 +1,7 @@
 const modalContainer = document.getElementById("modal-container"); 
 const modalOverlay = document.getElementById("modal-overlay");
 
-
+const cartCounter = document.getElementById("cart-counter")
 const cartBtn = document.getElementById("cart-btn");
 
 const displayCart = () =>{
@@ -69,12 +69,14 @@ cart.forEach((product) => {
             product.quanty--;
             displayCart();
         }
+        displayCartCounter();
     })
 
     const increse = modalBody.querySelector(".quantity-btn-increse");
     increse.addEventListener("click",()=>{
             product.quanty++;
             displayCart();
+            displayCartCounter(); 
     })
 
     const deleteProduct = modalBody.querySelector(".delete-product");
@@ -102,10 +104,23 @@ modalContainer.append(modalFooter);
 cartBtn.addEventListener("click", displayCart);
 
 
-const  deleteCartProduct = (id) => {
+const deleteCartProduct = (id) => {
     const foundId = cart.findIndex((element)=> element.id === id);
     console.log(foundId)
     cart.splice(foundId,1);
     displayCart();
+    displayCartCounter();
 };
 
+const displayCartCounter = () => {
+    const cartLength = cart.reduce((acc,el) => acc + el.quanty, 0);
+
+    if(cartLength > 0){
+        cartCounter.style.display = "block";
+        cartCounter.innerText = cartLength;
+    }else{
+        cart.style.display = "none";
+    }
+
+
+};
