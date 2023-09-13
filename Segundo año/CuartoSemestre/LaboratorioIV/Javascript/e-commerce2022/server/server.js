@@ -16,8 +16,8 @@ app.use(express.json());
 app.use(express.static(path.join(__dirname,"../client")));
 
 app.use(cors());
-app.get("/", function (req, res) {
-	res.status(200).sendFile("index.html");
+app.get("/", function () {
+    path.resolve(__dirname,"..","client","index.html");
 });
 
 app.post("/create_preference", (req, res) => {
