@@ -36,7 +36,7 @@ public class EstudiantesApplication implements CommandLineRunner {
 	}
 
 	private void mostrarMenu(){
-		logger.info(nl);
+//		logger.info(nl);
 		logger.info("""
 				****** Sistema de Estudiantes ******
 				1. Listar Estudiantes
@@ -56,7 +56,7 @@ public class EstudiantesApplication implements CommandLineRunner {
 				List<Estudiantes2022> estudiantes = estudianteServicio.listarEstudiantes();
 				estudiantes.forEach((estudiante -> logger.info(estudiante.toString()+nl)));
 			}
-			case 2 ->{
+			case 2 ->{ // Buscar estudiante por ID
 				logger.info(nl+"Ingrese el ID Estudiante a Buscar: "+nl);
 				var idEstudiante = Integer.parseInt(consola.nextLine());
 				Estudiantes2022 estudiante = estudianteServicio.buscarEstudiantePorId(idEstudiante);
@@ -66,7 +66,7 @@ public class EstudiantesApplication implements CommandLineRunner {
 					logger.info("Estudiante NO encontrado: "+ estudiante+nl);
 				} // Fin else
 			}
-			case 3 ->{
+			case 3 ->{ // Agregar estudiante
 				logger.info(nl+"Ingrese los datos del Estudiante al agregar"+nl);
 				logger.info(nl+"Nombre: "+nl);
 				var nombre = consola.nextLine();
@@ -86,7 +86,7 @@ public class EstudiantesApplication implements CommandLineRunner {
 				logger.info("Estudiante agregado: "+estudiante+nl);
 
 			}
-			case 4 ->{
+			case 4 ->{ // Modificar estudiante
 				logger.info(nl+"Modificar Estudiante: "+nl);
 				logger.info(nl+"Seleccione el ID Estudiante: "+nl);
 				var idEstudiante = Integer.parseInt(consola.nextLine());
@@ -112,6 +112,24 @@ public class EstudiantesApplication implements CommandLineRunner {
 				}
 
 			}
+			case 5 ->{ // Eliminar estudiante por ID
+				logger.info(nl+"Eliminar Estudiante: "+nl);
+				logger.info(nl+"Seleccione el ID Estudiante: "+nl);
+				var idEstudiante = Integer.parseInt(consola.nextLine());
+				var estudiante = estudianteServicio.buscarEstudiantePorId(idEstudiante);
+				if(estudiante != null){
+					estudianteServicio.eliminarEstudiante(estudiante);
+					logger.info("Estudiante Eliminado: "+estudiante+nl);
+				}else {
+					logger.info("No se encontró el estudiante con el ID"+estudiante+nl);
+				}
+
+			}
+			case 6 ->{ // Salir
+				logger.info("Hasta Pronto!!"+nl+nl);
+				salir = true;
+			}
+			default -> logger.info("Opcion NO reconocida: "+opcion+nl);
 		} // Fin switch
 		return salir;
 	};
