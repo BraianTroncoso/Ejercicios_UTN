@@ -52,9 +52,45 @@ public class EstudiantesApplication implements CommandLineRunner {
 		var salir = false;
 		switch (opcion){
 			case 1 ->{// Listar estudiantes
-				logger.info(nl+"Listado de estudiantes: "+nl);
+				logger.info(nl+"Listado de Estudiantes: "+nl);
 				List<Estudiantes2022> estudiantes = estudianteServicio.listarEstudiantes();
 				estudiantes.forEach((estudiante -> logger.info(estudiante.toString()+nl)));
+			}
+			case 2 ->{
+				logger.info(nl+"Ingrese el ID Estudiante a Buscar: "+nl);
+				var idEstudiante = Integer.parseInt(consola.nextLine());
+				Estudiantes2022 estudiante = estudianteServicio.buscarEstudiantePorId(idEstudiante);
+				if (estudiante != null){
+					logger.info("Estudiante encontrado: "+ estudiante+nl);
+				}else{
+					logger.info("Estudiante NO encontrado: "+ estudiante+nl);
+				} // Fin else
+			}
+			case 3 ->{
+				logger.info(nl+"Ingrese los datos del Estudiante al agregar"+nl);
+				logger.info(nl+"Nombre: "+nl);
+				var nombre = consola.nextLine();
+				logger.info(nl+"Apellido: "+nl);
+				var apellido = consola.nextLine();
+				logger.info(nl+"Email: "+nl);
+				var email = consola.nextLine();
+				logger.info(nl+"Telefono: "+nl);
+				var telefono = consola.nextLine();
+				// Creando el objeto estudiante sin el ID
+				var estudiante = new Estudiantes2022();
+				estudiante.setNombre(nombre);
+				estudiante.setApellido(apellido);
+				estudiante.setTelefono(telefono);
+				estudiante.setEmail(email);
+				estudianteServicio.agregarEstudiante(estudiante);
+				logger.info("Estudiante agregado: "+estudiante+nl);
+
+			}
+			case 4 ->{
+				logger.info(nl+"Seleccione el Estudiante a modificar: "+nl);
+				List<Estudiantes2022> estudiantes = estudianteServicio.listarEstudiantes();
+				estudiantes.forEach((estudiante -> logger.info(estudiante.toString()+nl)));
+
 			}
 		} // Fin switch
 		return salir;
