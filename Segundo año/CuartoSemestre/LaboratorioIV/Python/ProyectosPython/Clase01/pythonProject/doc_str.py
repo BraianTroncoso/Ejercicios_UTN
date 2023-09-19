@@ -1,7 +1,3 @@
-'''
-Podemos crear documentacion
-'''
-
-"""
-Estas son las maneras de documentar
-"""
+from mi_clase import MiClase
+#help(MiClase)
+print(MiClase.__doc__)

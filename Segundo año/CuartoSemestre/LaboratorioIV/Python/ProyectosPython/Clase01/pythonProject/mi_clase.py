@@ -1,4 +1,4 @@
-class mi_clase:
+class MiClase:
     '''
     Este es un ejemplo de la documentacion de esta clase
     es solo para saber que aqui esta mi clase.
