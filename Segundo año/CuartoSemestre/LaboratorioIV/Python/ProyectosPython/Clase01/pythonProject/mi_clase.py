@@ -9,7 +9,7 @@ class MiClase:
         Est método es el inicio
         para esta clase
         '''
-        def mi_metodo(self,param1,param2):
+    def mi_metodo(self,param1,param2):
             '''
             Dectectó los parametros automaticamente
             Este es el método creado por mi que recibe parametros
