@@ -14,5 +14,6 @@ print(f'Mensaje: {mensaje}')
 diccionario = {'Nombre': 'Juan', 'Apellido': 'Perez', 'Edad': '18'}
 llaves = '-'.join(diccionario.keys())
 valores = '-'.join(diccionario.values())
+# Cambia a tipo cadena desde que se utiliza el .join
 print(f'Llaves: {llaves}, Type: {type(llaves)}')
 print(f'Valores: {valores}, Type: {type(valores)}')
