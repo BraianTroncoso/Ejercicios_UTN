@@ -1,5 +1,5 @@
 #help(str.join)
-
+# Join: agregar - unirse
 tupla_str = ('Hola', 'Alumnos', 'Tecnicatura', 'Universitaria')
 mensaje = ' '.join(tupla_str)
 print(f'Mensaje: {mensaje}')
