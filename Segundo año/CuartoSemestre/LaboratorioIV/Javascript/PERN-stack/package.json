@@ -21,12 +21,12 @@
     "express-promise-router": "^4.1.1",
     "jsonwebtoken": "^9.0.2",
     "md5": "^2.3.0",
-    "morgan": "^1.10.0",
     "pg": "^8.11.3",
     "zod": "^3.22.2"
   },
   "devDependencies": {
     "eslint": "^8.49.0",
+    "morgan": "^1.10.0",
     "nodemon": "^3.0.1"
   }
 }
