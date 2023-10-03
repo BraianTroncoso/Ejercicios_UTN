@@ -23,6 +23,6 @@ mensaje = 'Nombre {n} Edad {e} Sueldo {s:.2f}'.format(n=nombre, e=edad, s=sueldo
 # Para asignarles un valor similar al argumento posicional
 #print(mensaje)
 
-diccionario = {'nombre':'Ivan','edad':35, 'sueldo':8000.00}
-mensaje = 'Nombre: {dic[nombre]} Edad: {dic[edad]} Sueldo: {dic[sueldo]:.2f}'.format(dic=diccionario)
-print(mensaje)
+#diccionario = {'nombre':'Ivan','edad':35, 'sueldo':8000.00}
+#mensaje = 'Nombre: {dic[nombre]} Edad: {dic[edad]} Sueldo: {dic[sueldo]:.2f}'.format(dic=diccionario)
+#print(mensaje)
