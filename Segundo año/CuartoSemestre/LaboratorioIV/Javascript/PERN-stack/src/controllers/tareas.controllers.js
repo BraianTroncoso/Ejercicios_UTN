@@ -1,4 +1,6 @@
 // con express-promise-router estamos manejando las excepciones de una forma gral sin tanto codigo
+import {pool} from "../db.js";
+
 export const listarTareas = async (req, res, next) => {
     const resultado = await pool.query('SELECT * FROM tareas1');
     console.log(resultado);
