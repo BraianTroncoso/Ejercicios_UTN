@@ -5,6 +5,7 @@ export const pool = new pg.Pool({
     host: "localhost",
     user: "postgres",
     password: "postgres",
+    database: "PERN",
 });
 
 pool.on("connect", () =>{
