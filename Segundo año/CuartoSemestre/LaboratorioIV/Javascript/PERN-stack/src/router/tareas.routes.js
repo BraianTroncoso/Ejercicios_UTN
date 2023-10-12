@@ -1,5 +1,4 @@
 import { Router } from "express";
 
 const router = Router();
-router.get('/tareas',(req, res) =)
-<<<<<<<<<<<<<<<<>><<>>>><<>>>><<<>>></>
+router.get('/tareas',(req, res) )
