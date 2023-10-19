@@ -10,7 +10,7 @@ import lombok.ToString;
 @NoArgsConstructor
 @AllArgsConstructor
 @ToString
-
+@Table(name = "libro")
 @Entity
 public class Libro {
     @Id
