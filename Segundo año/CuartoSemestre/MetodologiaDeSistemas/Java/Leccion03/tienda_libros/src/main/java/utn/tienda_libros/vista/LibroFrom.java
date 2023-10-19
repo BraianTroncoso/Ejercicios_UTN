@@ -1,17 +1,19 @@
 package utn.tienda_libros.vista;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.context.annotation.ComponentScan;
 import org.springframework.stereotype.Component;
 import utn.tienda_libros.servicio.LibroServicio;
 
 import javax.swing.*;
+import javax.swing.table.DefaultTableModel;
 import java.awt.*;
 
 @Component
 public class LibroFrom extends JFrame  {
     LibroServicio libroServicio;
     private JPanel panel;
+    private JTable tablaLibros;
+    private DefaultTableModel tablaModeloLibros;
 
     @Autowired
     public LibroFrom(LibroServicio libroServicio){
@@ -30,5 +32,10 @@ public class LibroFrom extends JFrame  {
         int x = (tamanioPantalla.width - getWidth() / 2);
         int y = (tamanioPantalla.height - getHeight() / 2);
         setLocation(x,y);
+    }
+    // Como intectamos una instancia de LibroServicio en nuestro constructor de la clase LibroForms, ya podriamos utilizar esa instancia
+    // en cualquier parte de nuestra clase
+    private void createUIComponents() {
+        // TODO: place custom component creation code here
     }
 }

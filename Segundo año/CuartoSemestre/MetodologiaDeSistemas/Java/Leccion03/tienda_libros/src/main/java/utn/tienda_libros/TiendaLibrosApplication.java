@@ -25,5 +25,6 @@ public class TiendaLibrosApplication {
 		LibroFrom libroFrom = contextoSpring.getBean(LibroFrom.class);
 		libroFrom.setVisible(true);
 	});
+
 };
 };
