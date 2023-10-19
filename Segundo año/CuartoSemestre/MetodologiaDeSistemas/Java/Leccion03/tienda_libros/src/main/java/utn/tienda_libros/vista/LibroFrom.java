@@ -36,6 +36,10 @@ public class LibroFrom extends JFrame  {
     // Como intectamos una instancia de LibroServicio en nuestro constructor de la clase LibroForms, ya podriamos utilizar esa instancia
     // en cualquier parte de nuestra clase
     private void createUIComponents() {
-        // TODO: place custom component creation code here
+        this.tablaModeloLibros = new DefaultTableModel(0 , 5);
+        String [] cabecera = {"Id", "Libro", "Autor", "Precio", "Existencias"};
+        this.tablaModeloLibros.setColumnIdentifiers(cabecera);
+        // Instanciar el objeto de Jtable
+        this.tablaLibros = new JTable(tablaModeloLibros);
     }
 }
