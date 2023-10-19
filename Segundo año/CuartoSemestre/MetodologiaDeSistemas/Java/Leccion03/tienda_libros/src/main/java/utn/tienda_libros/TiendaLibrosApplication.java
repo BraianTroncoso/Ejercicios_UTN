@@ -13,16 +13,17 @@ import java.awt.*;
 public class TiendaLibrosApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(TiendaLibrosApplication.class, args);
-	}
+
 	ConfigurableApplicationContext contextoSpring =
 			new SpringApplicationBuilder(TiendaLibrosApplication.class)
 					.headless(false)
 					.web(WebApplicationType.NONE)
 					.run(args);
 	// Ejecutamos el código para cargar el formulario
-	EventQueue.invokeLater(()->{
+	EventQueue.invokeLater(()->{ // Método lambda similar al flecha de js
 		// Obtenemos el objeto from a través del spring
 		LibroFrom libroFrom = contextoSpring.getBean(LibroFrom.class);
+		libroFrom.setVisible(true);
 	});
-}
+};
+};
