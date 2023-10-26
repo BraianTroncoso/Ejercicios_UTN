@@ -15,9 +15,14 @@ import lombok.ToString;
 public class Libro {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column
     Integer idLibro;
+    @Column
     String nombreLibro;
+    @Column
     String autor;
+    @Column
     Double precio;
+    @Column
     Integer existencias;
 }
