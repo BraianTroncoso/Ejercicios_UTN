@@ -23,15 +23,6 @@ public class LibroFrom extends JFrame  {
     private JButton eliminarButton;
     private DefaultTableModel tablaModeloLibros;
 
-    @Autowired
-    public LibroFrom(LibroServicio libroServicio){
-        this.libroServicio = libroServicio;
-        iniciarForma();
-        agregarButton.addActionListener(e -> {
-
-        });
-    }
-
     private void iniciarForma() {
         setContentPane(panel);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -43,6 +34,27 @@ public class LibroFrom extends JFrame  {
         int x = (tamanioPantalla.width - getWidth() / 2);
         int y = (tamanioPantalla.height - getHeight() / 2);
         setLocation(x,y);
+    }
+        private void agregarLibro(){
+            // Leer los valores del formulario
+            if (libroTexto.getText().equals("")){
+                mostrarMensaje("Ingrese el nombre del libro");
+                libroTexto.requestFocusInWindow();
+                return;
+            };
+        };
+        private void mostrarMensaje(String mensaje){
+        JOptionPane.showMessageDialog(this,mensaje);
+        };
+
+
+    @Autowired
+    public LibroFrom(LibroServicio libroServicio){
+        this.libroServicio = libroServicio;
+        iniciarForma();
+        agregarButton.addActionListener(e -> agregarLibro());{
+
+        };
     }
     // Como intectamos una instancia de LibroServicio en nuestro constructor de la clase LibroForms, ya podriamos utilizar esa instancia
     // en cualquier parte de nuestra clase
