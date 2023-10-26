@@ -63,7 +63,7 @@
               </component>
             </children>
           </grid>
-          <component id="2c0ac" class="javax.swing.JTextField" binding="libroTextoTextFieldTextField" default-binding="true">
+          <component id="2c0ac" class="javax.swing.JTextField" binding="libroTexto">
             <constraints>
               <grid row="0" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
                 <preferred-size width="150" height="-1"/>
@@ -119,7 +119,7 @@
               <text value="Precio"/>
             </properties>
           </component>
-          <component id="93e5c" class="javax.swing.JTextField" binding="precioTextoTexFieldTextField" default-binding="true">
+          <component id="93e5c" class="javax.swing.JTextField" binding="precioTexto">
             <constraints>
               <grid row="0" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
                 <preferred-size width="150" height="-1"/>
@@ -147,7 +147,7 @@
               <text value="Existencias"/>
             </properties>
           </component>
-          <component id="5f5d" class="javax.swing.JTextField" binding="existenciasTextoTexFieldTextField" default-binding="true">
+          <component id="5f5d" class="javax.swing.JTextField" binding="existenciasTexto">
             <constraints>
               <grid row="0" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
                 <preferred-size width="150" height="-1"/>
