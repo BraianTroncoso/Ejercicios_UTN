@@ -45,7 +45,25 @@ public class LibroFrom extends JFrame  {
             }
         });
         modificarButton.addActionListener(e -> modificarLibro());
-    };
+        eliminarButton.addActionListener(e -> eliminarLibro());
+    }
+
+    private void eliminarLibro() {
+        var renglon = tablaLibros.getSelectedRow();
+        if (renglon != -1){
+            String idLibro = tablaLibros.getModel().getValueAt(renglon, 0).toString();
+            var libro = new Libro();
+            libro.setIdLibro(Integer.parseInt(idLibro));
+            libroServicio.eliminarLibro(libro);
+            mostrarMensaje("Libro "+idLibro+" ELIMINADO");
+            limpiarFormulario();
+            listarLibros();
+        }else{
+            mostrarMensaje("No se ha seleccionado ningun libro de la Tabla a Eliminar");
+        }
+    }
+
+
     private void iniciarForma() {
         setContentPane(panel);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -58,6 +76,7 @@ public class LibroFrom extends JFrame  {
         int y = (tamanioPantalla.height - getHeight() / 2);
         setLocation(x,y);
     }
+
     public void agregarLibro(){
         // Leer los valores del formulario
         if (libroTexto.getText().equals("")){
@@ -80,6 +99,7 @@ public class LibroFrom extends JFrame  {
         limpiarFormulario();
         listarLibros();
     };
+
     private void cargarLibroSeleccionado() {
         // Los indices de las columnas inician en 0
   var renglon = tablaLibros.getSelectedRow();
@@ -101,16 +121,24 @@ public class LibroFrom extends JFrame  {
 
   }
     }
+
     private void modificarLibro() {
     if (this.idTexto.equals("")){
         mostrarMensaje("Debes seleccionar un Registro en la Tabla");
     }else{
         // Verificamos que él nombre del libro no sea nulo
-        if (libroTexto.equals("")){
+        if (this.libroTexto.equals("")){
             mostrarMensaje("Digite el nombre del Libro...");
             libroTexto.requestFocusInWindow();
             return;
-        };
+        }if (this.libroTexto == this.libroTexto){
+            mostrarMensaje("No se ha modificado NADA");
+            libroTexto.requestFocusInWindow();
+            return;
+        }
+        else {
+            mostrarMensaje("No se  ha seleccionado NINGUN Libro para Modificar");
+        }
         // Llenamos el objeto Libro a actualizar
         int idLibro = Integer.parseInt(idTexto.getText());
         var nombreLibro = libroTexto.getText();
@@ -124,6 +152,7 @@ public class LibroFrom extends JFrame  {
         listarLibros();
     }
     }
+
     private void limpiarFormulario(){
         libroTexto.setText("");
         autorTexto.setText("");
