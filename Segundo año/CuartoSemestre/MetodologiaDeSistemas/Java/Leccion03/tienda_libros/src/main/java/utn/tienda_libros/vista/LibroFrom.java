@@ -8,6 +8,8 @@ import utn.tienda_libros.servicio.LibroServicio;
 import javax.swing.*;
 import javax.swing.table.DefaultTableModel;
 import java.awt.*;
+import java.awt.event.MouseAdapter;
+import java.awt.event.MouseEvent;
 
 @Component
 public class LibroFrom extends JFrame  {
@@ -36,7 +38,7 @@ public class LibroFrom extends JFrame  {
         int y = (tamanioPantalla.height - getHeight() / 2);
         setLocation(x,y);
     }
-        private void agregarLibro(){
+        public void agregarLibro(){
             // Leer los valores del formulario
             if (libroTexto.getText().equals("")){
                 mostrarMensaje("Ingrese el nombre del libro");
@@ -77,6 +79,12 @@ public class LibroFrom extends JFrame  {
         agregarButton.addActionListener(e -> agregarLibro());{
 
         };
+        panel.addMouseListener(new MouseAdapter() {
+            @Override
+            public void mouseClicked(MouseEvent e) {
+                super.mouseClicked(e);
+            }
+        });
     }
     // Como intectamos una instancia de LibroServicio en nuestro constructor de la clase LibroForms, ya podriamos utilizar esa instancia
     // en cualquier parte de nuestra clase
