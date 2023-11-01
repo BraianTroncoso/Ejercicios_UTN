@@ -16,6 +16,7 @@ public class LibroFrom extends JFrame  {
     LibroServicio libroServicio;
     private JPanel panel;
     private JTable tablaLibros;
+    private JTextField idTexto;
     private JTextField libroTexto;
     private JLabel Autor;
     private JTextField autorTexto;
@@ -83,18 +84,33 @@ public class LibroFrom extends JFrame  {
             @Override
             public void mouseClicked(MouseEvent e) {
                 super.mouseClicked(e);
+                cargarLibroSeleccionado();
             }
         });
     }
+
+
     // Como intectamos una instancia de LibroServicio en nuestro constructor de la clase LibroForms, ya podriamos utilizar esa instancia
     // en cualquier parte de nuestra clase
     private void createUIComponents() {
+        idTexto = new JTextField("");
+        idTexto.setVisible(false);
         this.tablaModeloLibros = new DefaultTableModel(0 , 5);
         String [] cabecera = {"Id", "Libro", "Autor", "Precio", "Existencias"};
         this.tablaModeloLibros.setColumnIdentifiers(cabecera);
         // Instanciar el objeto de Jtable
         this.tablaLibros = new JTable(tablaModeloLibros);
         listarLibros();
+    }
+
+
+
+    private void cargarLibroSeleccionado() {
+        // Los indices de las columnas inician en 0
+  var renglon = tablaLibros.getSelectedRow();
+  if(renglon != -1){
+      String idLibro = tablaLibros.getModel().getValueAt(renglon, 0).toString();
+  }
     }
 
     private void listarLibros() {
