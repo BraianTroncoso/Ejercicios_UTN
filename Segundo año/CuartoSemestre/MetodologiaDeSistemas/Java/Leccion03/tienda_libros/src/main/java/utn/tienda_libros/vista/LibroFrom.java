@@ -8,6 +8,8 @@ import utn.tienda_libros.servicio.LibroServicio;
 import javax.swing.*;
 import javax.swing.table.DefaultTableModel;
 import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 
@@ -27,51 +29,6 @@ public class LibroFrom extends JFrame  {
     private JButton eliminarButton;
     private DefaultTableModel tablaModeloLibros;
 
-    private void iniciarForma() {
-        setContentPane(panel);
-        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        setVisible(true);
-        setSize(900,700);
-        // Para obtener las dimenciones de la ventana
-        Toolkit toolkit = Toolkit.getDefaultToolkit();
-        Dimension tamanioPantalla = toolkit.getScreenSize();
-        int x = (tamanioPantalla.width - getWidth() / 2);
-        int y = (tamanioPantalla.height - getHeight() / 2);
-        setLocation(x,y);
-    }
-        public void agregarLibro(){
-            // Leer los valores del formulario
-            if (libroTexto.getText().equals("")){
-                mostrarMensaje("Ingrese el nombre del libro");
-                libroTexto.requestFocusInWindow();
-                return;
-            };
-            var nombreLibro = libroTexto.getText();
-            var autor = autorTexto.getText();
-            var precio = Double.parseDouble(precioTexto.getText());
-            var existencias = Integer.parseInt(existenciasTexto.getText());
-            // Si pasamos el valor null va hacer un INSERT en caso que le pasemos un ID va a ser un UPDATE
-            var libro = new Libro(null,nombreLibro,autor,precio,existencias);
-          /*  libro.setNombreLibro(nombreLibro);
-            libro.setAutor(autor);
-            libro.setPrecio(precio);
-            libro.setExistencias(existencias);*/
-            this.libroServicio.guardarLibro(libro);
-            mostrarMensaje("Se agregó el libro");
-            limpiarFormulario();
-            listarLibros();
-        };
-    private void limpiarFormulario(){
-    libroTexto.setText("");
-    autorTexto.setText("");
-    precioTexto.setText("");
-    existenciasTexto.setText("");
-    };
-
-        private void mostrarMensaje(String mensaje){
-        JOptionPane.showMessageDialog(this,mensaje);
-        };
-
 
     @Autowired
     public LibroFrom(LibroServicio libroServicio){
@@ -87,24 +44,42 @@ public class LibroFrom extends JFrame  {
                 cargarLibroSeleccionado();
             }
         });
+        modificarButton.addActionListener(e -> modificarLibro());
+    };
+    private void iniciarForma() {
+        setContentPane(panel);
+        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        setVisible(true);
+        setSize(900,700);
+        // Para obtener las dimenciones de la ventana
+        Toolkit toolkit = Toolkit.getDefaultToolkit();
+        Dimension tamanioPantalla = toolkit.getScreenSize();
+        int x = (tamanioPantalla.width - getWidth() / 2);
+        int y = (tamanioPantalla.height - getHeight() / 2);
+        setLocation(x,y);
     }
-
-
-    // Como intectamos una instancia de LibroServicio en nuestro constructor de la clase LibroForms, ya podriamos utilizar esa instancia
-    // en cualquier parte de nuestra clase
-    private void createUIComponents() {
-        idTexto = new JTextField("");
-        idTexto.setVisible(false);
-        this.tablaModeloLibros = new DefaultTableModel(0 , 5);
-        String [] cabecera = {"Id", "Libro", "Autor", "Precio", "Existencias"};
-        this.tablaModeloLibros.setColumnIdentifiers(cabecera);
-        // Instanciar el objeto de Jtable
-        this.tablaLibros = new JTable(tablaModeloLibros);
+    public void agregarLibro(){
+        // Leer los valores del formulario
+        if (libroTexto.getText().equals("")){
+            mostrarMensaje("Ingrese el nombre del libro");
+            libroTexto.requestFocusInWindow();
+            return;
+        };
+        var nombreLibro = libroTexto.getText();
+        var autor = autorTexto.getText();
+        var precio = Double.parseDouble(precioTexto.getText());
+        var existencias = Integer.parseInt(existenciasTexto.getText());
+        // Si pasamos el valor null va hacer un INSERT en caso que le pasemos un ID va a ser un UPDATE
+        var libro = new Libro(null,nombreLibro,autor,precio,existencias);
+          /*  libro.setNombreLibro(nombreLibro);
+            libro.setAutor(autor);
+            libro.setPrecio(precio);
+            libro.setExistencias(existencias);*/
+        this.libroServicio.guardarLibro(libro);
+        mostrarMensaje("Se agregó el libro");
+        limpiarFormulario();
         listarLibros();
-    }
-
-
-
+    };
     private void cargarLibroSeleccionado() {
         // Los indices de las columnas inician en 0
   var renglon = tablaLibros.getSelectedRow();
@@ -126,6 +101,29 @@ public class LibroFrom extends JFrame  {
 
   }
     }
+    private void modificarLibro() {
+    if (this.idTexto.equals("")){
+        mostrarMensaje("Debes seleccionar un Registro en la Tabla");
+    }else{
+        // Verificamos que él nombre del libro no sea nulo
+        if (libroTexto.equals("")){
+            mostrarMensaje("Digite el nombre del Libro...");
+            libroTexto.requestFocusInWindow();
+            return;
+        };
+
+    }
+    }
+    private void limpiarFormulario(){
+        libroTexto.setText("");
+        autorTexto.setText("");
+        precioTexto.setText("");
+        existenciasTexto.setText("");
+    };
+
+    private void mostrarMensaje(String mensaje){
+        JOptionPane.showMessageDialog(this,mensaje);
+    };
 
     private void listarLibros() {
         // Limpiamos la tabla
@@ -147,5 +145,17 @@ public class LibroFrom extends JFrame  {
             this.tablaModeloLibros.addRow(reglonLibro);
         });
 
+    }
+    // Como intectamos una instancia de LibroServicio en nuestro constructor de la clase LibroForms, ya podriamos utilizar esa instancia
+    // en cualquier parte de nuestra clase
+    private void createUIComponents() {
+        idTexto = new JTextField("");
+        idTexto.setVisible(false);
+        this.tablaModeloLibros = new DefaultTableModel(0 , 5);
+        String [] cabecera = {"Id", "Libro", "Autor", "Precio", "Existencias"};
+        this.tablaModeloLibros.setColumnIdentifiers(cabecera);
+        // Instanciar el objeto de Jtable
+        this.tablaLibros = new JTable(tablaModeloLibros);
+        listarLibros();
     }
 }
