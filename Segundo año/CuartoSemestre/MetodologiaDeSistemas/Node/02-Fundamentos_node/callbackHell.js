@@ -26,13 +26,15 @@ hola('Carlos',function(nombre){
             hablar(function (){
                 hablar(function (){
                     hablar(function (){
-
+                        adios(nombre,function(){
+                            console.log('Finalizando el proceso...')
+                            adios(nombre,function(){
+                                console.log('Finalizando el proceso...')
+                            });
+                        });
                     });
                 });
             }); 
         });
     });
-        adios(nombre,function(){
-            console.log('Finalizando el proceso...')
-        });
-    });
+});
