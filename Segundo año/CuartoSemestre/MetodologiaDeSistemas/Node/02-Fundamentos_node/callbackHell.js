@@ -20,21 +20,26 @@ function adios(nombre, otraCallback){
 }
 //--Proceso Princial
 console.log('Iniciando el proceso...');
-hola('Carlos',function(nombre){
-    hablar(function (){
-        hablar(function (){
-            hablar(function (){
-                hablar(function (){
-                    hablar(function (){
-                        adios(nombre,function(){
-                            console.log('Finalizando el proceso...')
-                            adios(nombre,function(){
-                                console.log('Finalizando el proceso...')
-                            });
-                        });
-                    });
-                });
-            }); 
-        });
-    });
-});
+hola('Ariel',function(nombre){
+    adios(nombre, function(){
+        console.log('Terminamos')
+    })
+})
+// hola('Carlos',function(nombre){
+//     hablar(function (){
+//         hablar(function (){
+//             hablar(function (){
+//                 hablar(function (){
+//                     hablar(function (){
+//                         adios(nombre,function(){
+//                             console.log('Finalizando el proceso...')
+//                             adios(nombre,function(){
+//                                 console.log('Finalizando el proceso...')
+//                             });
+//                         });
+//                     });
+//                 });
+//             }); 
+//         });
+//     });
+// });
