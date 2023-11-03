@@ -8,7 +8,7 @@ async function hola(nombre){ // async puede trabajar sin la necesidad de utiliza
    
 }
 
-function hablar(nombre){
+async function hablar(nombre){
     return new Promise((resolve,reject) =>{ // Usamos la sintaxis de ES6
         setTimeout(function (){
             console.log('bla bla bla')
@@ -17,12 +17,12 @@ function hablar(nombre){
     })
 }
 
-function adios(nombre){
+async function adios(nombre){
     return new Promise((resolve, reject)=>{
         setTimeout(function(){
             console.log('Adios '+ nombre);
-            // resolve();
-            reject('Hay un error');
+            resolve();
+            // reject('Hay un error');
         },1500)
     })
 }
@@ -30,7 +30,12 @@ function adios(nombre){
 // await hola('Ariel'); // Esto es una mala sintaxis, no sabe que hacer
 
 async function main(){
-    await hola('Ariel')
+    let nombre = await hola('Ariel')
+    await hablar()
+    await hablar()
+    await hablar()
+    await hablar()
+    await adios(nombre)
 };
 
 main();
