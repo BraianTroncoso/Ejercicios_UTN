@@ -1,4 +1,4 @@
-function hola(nombre){
+async function hola(nombre){ // async puede trabajar sin la necesidad de utilizar el await
     return new Promise(function (resolve, reject) {
         setTimeout(function (){
             console.log('Hola, '+nombre);
@@ -9,7 +9,7 @@ function hola(nombre){
 }
 
 function hablar(nombre){
-    return new Promise((resolve,reject) =>{
+    return new Promise((resolve,reject) =>{ // Usamos la sintaxis de ES6
         setTimeout(function (){
             console.log('bla bla bla')
             resolve(nombre);
@@ -26,3 +26,11 @@ function adios(nombre){
         },1500)
     })
 }
+
+// await hola('Ariel'); // Esto es una mala sintaxis, no sabe que hacer
+
+async function main(){
+    await hola('Ariel')
+};
+
+main();
