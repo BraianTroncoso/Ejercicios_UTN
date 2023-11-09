@@ -24,6 +24,17 @@ function borrar(ruta,cb){
     // Por eso no utilizamos delete
 }
 
+function actualizar(nombre_actual,nombre_nuevo){
+    fs.rename(nombre_actual,nombre_nuevo, (err)=>{
+        if(err){
+            console.log('No se ha podido actualizar el nombre',err)
+        }else{
+            console.log('Nombre actualizado correctamente')
+        }
+    });
+}
+
+actualizar(`${__dirname}/archivo.txt`,`${__dirname}/archivo_nuevo.txt`);
 //borrar(`${__dirname}/archivo1.txt`,console.log);
 //escribir(`${__dirname}/archivo1.txt`,'Soy un nuevo archivo', console.log) // La funcion writeFile lo que hace
 // Es sobre escribir el archivo en el cual escribe, si le paso una leyenda esta misma sobreescribira la que estaba anteriormente.
