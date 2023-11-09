@@ -34,7 +34,7 @@ function actualizar(nombre_actual,nombre_nuevo){
     });
 }
 
-actualizar(`${__dirname}/archivo.txt`,`${__dirname}/archivo_nuevo.txt`);
+actualizar(`${__dirname}/archivo_nuevo.txt`,`${__dirname}/archivo.txt`);
 //borrar(`${__dirname}/archivo1.txt`,console.log);
 //escribir(`${__dirname}/archivo1.txt`,'Soy un nuevo archivo', console.log) // La funcion writeFile lo que hace
 // Es sobre escribir el archivo en el cual escribe, si le paso una leyenda esta misma sobreescribira la que estaba anteriormente.
